@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHYTONS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app">
+        <div id="instruction">
+            <header>
+                <h1 class="title">PHYTONS</h1>
+            </header>
+            <div class="card">
+                <div class="card-header">
+                    instruction
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <li>input your name</li>
+                        <li>click the play button</li>
+                        <li>use W-A-S-D to move the snake</li>
+                        <li>if you don't want to die don't hit board edge, bite your own tail, or eat the poison</li>
+                    </ol>
+                    <span>to rewind the snake</span>
+                    <ol>
+                        <li>click the rewind the button</li>
+                        <li>move the seeker to rewind the snake</li>
+                        <li>click cancel button to end the game rewind</li>
+                    </ol>
+                    <br>
+                    <input type="text" name="inputName" id="inputName">
+                    <button id="btnPlay" disabled>Play</button>
+                </div>
+            </div>
+        </div>
+        <div id="playground">
+            <header>
+                <div class="score-board">
+                    Score : <span id="score"></span>
+                </div>
+                <div class="title">
+                    <h1>PHYTONS</h1>
+                </div>
+                <div class="time-board">
+                    Time : <span id="timer"></span>
+                </div>
+            </header>
+
+            <div class="board">
+                <canvas id="canvas"></canvas>
+                <br>
+                <input type="range" name="" id="rewindRange" min="1" max="10" step="1">
+            </div>
+            <br>
+            <div class="game-info" style="z-index: -3">
+                <div class="live-board">
+                    live : <span id="live"></span>
+                </div>
+                <div class="poison-box">
+                    <span></span> poison
+                </div>
+                <div class="food-box">
+                    <span></span> food
+                </div>
+            </div>
+            <br>
+            <div class="btn-down">
+                <button id="btnCancel">Cancel</button>
+                <button id="btnRewind">Rewind</button>
+            </div>
+            <div class="alert">
+                <span id="message"></span>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
